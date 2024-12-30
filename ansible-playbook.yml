@@ -1,5 +1,5 @@
 - name: my play to project 3
-  hosts: jos
+  hosts: webserver
   become: true
   tasks:
     - name: uupdate repos
@@ -9,6 +9,6 @@
     - name: start docker service
       service: name=docker state=started
     - name: docker image
-      command: docker pull luvisjostonj/insurance:3
+      command: docker pull yashas/insurance:3
     - name: docker con
-      command: docker run -d -p 4567:8081 luvisjostonj/insurance:3
+      command: docker run -d -p 4567:8081 yashas/insurance:3
